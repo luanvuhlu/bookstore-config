@@ -9,6 +9,9 @@ spring:
   devtools:
     livereload:
       enabled: false
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/changelog-master.xml
 eureka:
   client:
     fetch-registry: true
