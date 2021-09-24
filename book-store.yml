@@ -44,15 +44,3 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: bookRoot
-  # servlet:
-  #   multipart:
-  #     enabled: true
-  #     file-size-threshold: 2KB
-  #     max-file-size: 200MB
-  #     max-request-size: 215MB
----
-spring:
-  profiles: dev
-  devtools:
-    livereload:
-      enabled: true
