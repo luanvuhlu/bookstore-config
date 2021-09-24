@@ -43,8 +43,8 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:33060/BOOKSTORE?useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: book
-    password: book
+    username: root
+    password: bookRoot
   # servlet:
   #   multipart:
   #     enabled: true
