@@ -1,26 +1,55 @@
-logging:
-  level:
-    "[org.springframework]": debug
-    "[root]": INFO
-    "[com.luanvv.microservices]": DEBUG
-spring:
-  application:
-    name: book-store
-  devtools:
-    livereload:
-      enabled: false
-  liquibase:
-    enabled: true
-    change-log: classpath:/db/changelog/changelog-master.xml
-    database-change-log-lock-table: BOOK_DATABASECHANGELOGLOCK
-    database-change-log-table: BOOK_DATABASECHANGELOG
-
+server:
+  port: 0
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    liquibase:
+      enabled: true
+
+logging:
+  level:
+    "[org.springframework]": INFO
+    "[root]": INFO
+
+spring:
+  application:
+    name: book-store
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        "[generate_statistics]": true
+        "[order_inserts]": true
+        "[order_updates]": true
+        "[format_sql]": true
+    show-sql: true
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/changelog-master.xml
+    database-change-log-lock-table: DATABASECHANGELOGLOCK
+    database-change-log-table: DATABASECHANGELOG
+  datasource:
+    url: jdbc:mysql://localhost:33060/bookstore?useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: book
+    password: book
+  # servlet:
+  #   multipart:
+  #     enabled: true
+  #     file-size-threshold: 2KB
+  #     max-file-size: 200MB
+  #     max-request-size: 215MB
 ---
 spring:
   profiles: dev
