@@ -19,6 +19,7 @@ logging:
   level:
     "[org.springframework]": INFO
     "[root]": INFO
+    "[liquibase]": DEBUG
 
 spring:
   application:
