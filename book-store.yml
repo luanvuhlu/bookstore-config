@@ -41,7 +41,7 @@ spring:
     database-change-log-lock-table: DATABASECHANGELOGLOCK
     database-change-log-table: DATABASECHANGELOG
   datasource:
-    url: jdbc:mysql://localhost:33060/bookstore?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:33060/BOOKSTORE?useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: book
     password: book
