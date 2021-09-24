@@ -44,13 +44,12 @@ spring:
       ddl-auto: none
     properties:
       hibernate:
-        "[generate_statistics]": true
         "[order_inserts]": true
         "[order_updates]": true
         "[format_sql]": true
     show-sql: true
   datasource:
-    url: jdbc:mysql://localhost:33060/audit?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:33060/AUDIT?useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: bookRoot
+    username: book
+    password: book
