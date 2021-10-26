@@ -30,6 +30,8 @@ spring:
     jpa:
       repositories:
         bootstrap-mode: lazy
+  functional:
+    enabled: false
   jpa:
     database: mysql
     hibernate:
