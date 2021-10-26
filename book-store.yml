@@ -11,7 +11,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "health"
     liquibase:
       enabled: true
 
@@ -30,8 +30,6 @@ spring:
     jpa:
       repositories:
         bootstrap-mode: lazy
-  functional:
-    enabled: false
   jpa:
     database: mysql
     hibernate:
