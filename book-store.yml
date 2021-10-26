@@ -24,6 +24,8 @@ logging:
 spring:
   application:
     name: book-store
+  main:
+    lazy-initialization: true
   jpa:
     database: mysql
     hibernate:
