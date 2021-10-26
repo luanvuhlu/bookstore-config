@@ -11,13 +11,12 @@ management:
   endpoints:
     web:
       exposure:
-        include: "health"
+        include: "*"
     liquibase:
       enabled: true
 
 logging:
   level:
-    "[physical_naming_strategy]": "com.luanvv.microservices.audit.config.UpperPhysicalNamingStrategy"
     "[org.springframework]": INFO
     "[root]": INFO
 
