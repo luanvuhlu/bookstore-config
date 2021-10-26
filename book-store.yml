@@ -26,6 +26,10 @@ spring:
     name: book-store
   main:
     lazy-initialization: true
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: lazy
   jpa:
     database: mysql
     hibernate:
