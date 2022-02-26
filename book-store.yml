@@ -48,6 +48,6 @@ spring:
     database-change-log-table: DATABASECHANGELOG
   datasource:
     url: jdbc:mysql://localhost:33060/BOOKSTORE?useSSL=false&serverTimezone=UTC
-    driverClassName: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: bookRoot
