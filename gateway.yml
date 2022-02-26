@@ -16,6 +16,12 @@ spring:
         - Path=/book-store/**
         filters:
         - RewritePath=/book-store/(?<segment>.*), /$\{segment}
+      - id: orderServiceModule
+        uri: lb://order-service
+        predicates:
+        - Path=/order/**
+        filters:
+        - RewritePath=/order/(?<segment>.*), /$\{segment}
         
 eureka:
   client:
