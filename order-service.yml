@@ -9,4 +9,4 @@ spring:
       database: ${MONGODB_DB:book}
       password: ${MONGODB_PASS:book}
       port: ${MONGODB_PORT:27017}
-      host: ${MONGODB_HOST:127.0.0.1}
+      host: ${MONGODB_HOST:localhost}
