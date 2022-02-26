@@ -13,7 +13,7 @@ spring:
       - id: bookStoreModule
         uri: lb://book-store
         predicates:
-        - Path=/book-store/**
+        - Path=/store/**
         filters:
         - RewritePath=/book-store/(?<segment>.*), /$\{segment}
       - id: orderServiceModule
