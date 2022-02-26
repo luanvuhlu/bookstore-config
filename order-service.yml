@@ -1,0 +1,12 @@
+server:
+  port: 0
+  
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: ${MONGODB_USER:book}
+      database: ${MONGODB_DB:book}
+      password: ${MONGODB_PASS:book}
+      port: ${MONGODB_PORT:27017}
+      host: ${MONGODB_HOST:127.0.0.1}
