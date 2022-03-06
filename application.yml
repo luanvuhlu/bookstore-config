@@ -4,6 +4,8 @@ spring:
 ---
 spring.profiles:
   - kubernetes
+server:
+  port: 8080
 eureka.client.enabled: false
 spring:
   zipkin:
