@@ -43,3 +43,19 @@ management:
 ---
 spring.profiles:
   - kubernetes
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: productServiceModule
+        uri: http://product-service:8080
+        predicates:
+        - Path=/store/**
+        filters:
+        - RewritePath=/store/(?<segment>.*), /$\{segment}
+      - id: orderServiceModule
+        uri: http://order-service:8080
+        predicates:
+        - Path=/order/**
+        filters:
+        - RewritePath=/order/(?<segment>.*), /$\{segment}
