@@ -16,6 +16,12 @@ spring:
         - Path=/store/**
         filters:
         - RewritePath=/book-store/(?<segment>.*), /$\{segment}
+      - id: productServiceModule
+        uri: lb://product-service
+        predicates:
+        - Path=/store/**
+        filters:
+        - RewritePath=/store/(?<segment>.*), /$\{segment}
       - id: orderServiceModule
         uri: lb://order-service
         predicates:
