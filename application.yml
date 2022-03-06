@@ -10,3 +10,5 @@ eureka.client.enabled: false
 spring:
   zipkin:
     baseUrl: http://zipkin:9411
+  kafka:
+    bootstrap-servers: kafka-headless:9092
