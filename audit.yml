@@ -61,3 +61,5 @@ spring.profiles:
 server:
   port: 8080
 spring.datasource.url: jdbc:mysql://audit-mysql:3306/AUDIT?useSSL=false&serverTimezone=UTC
+spring.kafka.bootstrap-servers:
+ - kafka-headless:9092
