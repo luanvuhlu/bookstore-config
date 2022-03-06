@@ -35,7 +35,5 @@ management:
       exposure:
         include: "*"
 ---
-spring:
-  profiles:
+spring.profiles:
   - kubernetes
-eureka.client.enabled: false 
