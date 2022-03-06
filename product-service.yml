@@ -35,7 +35,7 @@ spring:
       ddl-auto: none
     properties:
       hibernate:
-        "[physical_naming_strategy]": "com.luanvv.microservices.bookstore.config.UpperPhysicalNamingStrategy"
+        "[physical_naming_strategy]": "com.luanvv.microservices.bookstore.product.config.UpperPhysicalNamingStrategy"
         "[generate_statistics]": false
         "[order_inserts]": true
         "[order_updates]": true
