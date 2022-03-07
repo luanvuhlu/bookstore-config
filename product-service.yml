@@ -24,7 +24,7 @@ logging:
 
 spring:
   application:
-    name: book-store
+    name: product-service
   main:
     lazy-initialization: true
   data:
