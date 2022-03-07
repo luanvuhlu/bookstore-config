@@ -1,0 +1,31 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
+rest:
+  api:
+    audit: ${AUDIT_URI:http://audit:8080}
+    product-service: ${PRODUCT_SERVICE_URI:http://product-service:8080}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    "[org.springframework]": INFO
+    "[root]": INFO
+
+spring:
+  application:
+    name: louis-store
+  main:
+    lazy-initialization: true
+---
+spring.profiles:
+  - kubernetes
+server:
+  port: 8080
