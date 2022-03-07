@@ -43,6 +43,8 @@ management:
 ---
 spring.profiles:
   - kubernetes
+server:
+  port: 8080
 spring:
   cloud:
     gateway:
