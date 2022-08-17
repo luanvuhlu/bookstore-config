@@ -60,5 +60,3 @@ server:
   port: 8080
 spring.datasource:
   url: ${DATASOURCE_URL:jdbc:mysql://product-mysql:3306/BOOKSTORE?useSSL=false&serverTimezone=UTC}
-  username: ${DATASOURCE_USERNAME:root}
-  password: ${DATASOURCE_PASSWORD:bookRoot}
