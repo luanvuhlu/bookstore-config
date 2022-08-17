@@ -48,8 +48,6 @@ spring:
           content-type: 'application/json'
           destination: ${BOOK_EVENT_TOPIC:com.luanvv.bookstoremicroservices.book.save.event}
           consumer.valueSerde: JsonSerde
-  kafka:
-    bootstrap-servers: ${KAFKA_SERVERS:localhost:9092}
 ---
 spring.profiles:
   - kubernetes
